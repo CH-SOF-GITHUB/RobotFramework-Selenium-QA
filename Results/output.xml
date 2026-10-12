@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-12T16:20:02.998433" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="E:\PycharmProjects\automation\RobotFramework">
+<suite id="s1-s1" name="Tests" source="E:\PycharmProjects\automation\RobotFramework\Tests">
+<suite id="s1-s1-s1" name="One" source="E:\PycharmProjects\automation\RobotFramework\Tests\one.robot">
+<test id="s1-s1-s1-t1" name="Invalid Login Test|Scenario" line="30">
+<kw name="Open The Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-12T16:20:03.919436" level="INFO">Opening browser 'Chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-12T16:20:03.918439" elapsed="6.542756"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-12T16:20:10.462201" elapsed="0.048572"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-12T16:20:15.513153" level="INFO">Slept 5 seconds.</msg>
+<arg>time_=5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-12T16:20:10.511775" elapsed="5.001378"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Browser Initialized</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-12T16:20:15.514162" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-10-12T16:20:03.917431" elapsed="11.597731"/>
+</kw>
+<kw name="Login2 To Portal">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-12T16:20:15.517162" level="INFO">Typing text 'demolambdatestio@yopmail.com' into text field 'id:input-email'.</msg>
+<arg>locator=${Email Locator}</arg>
+<arg>text=${Email2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-12T16:20:15.516163" elapsed="0.143667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-12T16:20:15.659830" level="INFO">Typing text 'Admin12345!' into text field 'id:input-password'.</msg>
+<arg>locator=${Password Locator}</arg>
+<arg>text=${Password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-12T16:20:15.659830" elapsed="0.097235"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-12T16:20:15.767511" level="INFO">Clicking element '//input[@value='Login']'.</msg>
+<arg>locator=${Login Button Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-12T16:20:15.757065" elapsed="0.078441"/>
+</kw>
+<status status="PASS" start="2026-10-12T16:20:15.515162" elapsed="0.320344"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-10-12T16:20:16.388175" level="INFO">${currentURL} = https://ecommerce-playground.lambdatest.io/index.php?route=account/login</msg>
+<var>${currentURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-10-12T16:20:15.835506" elapsed="0.552669"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n Acutal URL : ${currentURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-12T16:20:16.388175" elapsed="0.001960"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-10-12T16:20:16.391145" level="FAIL">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</msg>
+<arg>${currentURL}</arg>
+<arg>item=/account</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="FAIL" start="2026-10-12T16:20:16.390135" elapsed="0.006003">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</status>
+</kw>
+<kw name="Close The Browser">
+<status status="NOT RUN" start="2026-10-12T16:20:16.397166" elapsed="0.000000"/>
+</kw>
+<tag>critical</tag>
+<tag>login</tag>
+<status status="FAIL" start="2026-10-12T16:20:03.913431" elapsed="12.484706">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</status>
+</test>
+<status status="FAIL" start="2026-10-12T16:20:03.107431" elapsed="13.300879"/>
+</suite>
+<status status="FAIL" start="2026-10-12T16:20:03.101435" elapsed="13.309877"/>
+</suite>
+<status status="FAIL" start="2026-10-12T16:20:03.012432" elapsed="13.401881"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">critical</stat>
+<stat pass="0" fail="1" skip="0">login</stat>
+</tag>
+<suite>
+<stat name="RobotFramework" id="s1" pass="0" fail="1" skip="0">RobotFramework</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">RobotFramework.Tests</stat>
+<stat name="One" id="s1-s1-s1" pass="0" fail="1" skip="0">RobotFramework.Tests.One</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
