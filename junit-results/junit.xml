@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="loginE2E" tests="1" errors="0" failures="1" skipped="0" time="17.215" timestamp="2026-10-13T17:57:53.112009">
+<testcase classname="loginE2E" name="SQA-003 Automation Logging into app using valid credentials" time="16.161">
+<failure message="'https://practicesoftwaretesting.com/auth/login' does not contain '/account'" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="Login to website"/>
+</properties>
+</testsuite>

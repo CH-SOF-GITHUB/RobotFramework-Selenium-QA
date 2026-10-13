@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "qas-cli": "^0.10.1"
+  }
+}

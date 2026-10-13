@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-13T17:57:53.109051" rpa="false" schemaversion="5">
+<suite id="s1" name="loginE2E" source="E:\PycharmProjects\automation\RobotFramework\EcommerceProject1\testcases\loginE2E.robot">
+<test id="s1-t1" name="SQA-003 Automation Logging into app using valid credentials" line="8">
+<kw name="Open The WebSite" owner="login_resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-13T17:57:54.168285" level="INFO">Opening browser 'Chrome' to base url 'https://practicesoftwaretesting.com/auth/login'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-13T17:57:54.168285" elapsed="4.774238"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-13T17:57:58.942523" elapsed="0.062522"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-13T17:58:04.007381" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-13T17:57:59.006045" elapsed="5.001336"/>
+</kw>
+<arg>Chrome</arg>
+<status status="PASS" start="2026-10-13T17:57:54.164341" elapsed="9.843040"/>
+</kw>
+<kw name="User Login" owner="login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-13T17:58:04.011569" level="INFO">Typing text 'bchaker28@yahoo.com' into text field 'id:email'.</msg>
+<arg>${EMAIL_FIELD Locator}</arg>
+<arg>bchaker28@yahoo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-13T17:58:04.011569" elapsed="0.225109"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-13T17:58:04.236678" level="INFO">Typing text 'ChakerSecure#2026!Test' into text field 'id:password'.</msg>
+<arg>${PASSWORD_FIELD Locator}</arg>
+<arg>ChakerSecure#2026!Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-13T17:58:04.236678" elapsed="0.181768"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-13T17:58:04.420456" level="INFO">Clicking button 'xpath://input[@value='Connexion']'.</msg>
+<arg>${LOGIN_BUTTON Locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-13T17:58:04.418446" elapsed="0.128242"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-13T17:58:07.547215" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-13T17:58:04.546688" elapsed="3.000527"/>
+</kw>
+<status status="PASS" start="2026-10-13T17:58:04.011569" elapsed="3.535646"/>
+</kw>
+<kw name="Verify Logging into application" owner="login_resource">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-10-13T17:58:07.548971" level="INFO">${CurrentURL} = https://practicesoftwaretesting.com/auth/login</msg>
+<var>${CurrentURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-10-13T17:58:07.548971" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nCurrent URL after Login : ${CurrentURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-13T17:58:07.548971" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-10-13T17:58:07.566695" level="FAIL">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</msg>
+<arg>${CurrentURL}</arg>
+<arg>item=/account</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="FAIL" start="2026-10-13T17:58:07.548971" elapsed="0.017724">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${MY_COMPTE Locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-13T17:58:07.568292" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${MY_COMPTE Locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-13T17:58:07.568292" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nText of Element : ${element_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-10-13T17:58:07.568292" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-10-13T17:58:07.548971" elapsed="0.020372">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+</kw>
+<kw name="Take Screenshot Of Test result" owner="login_resource">
+<status status="NOT RUN" start="2026-10-13T17:58:07.569343" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-13T17:58:07.569343" elapsed="2.753826"/>
+</kw>
+<tag>critical</tag>
+<tag>login</tag>
+<status status="FAIL" start="2026-10-13T17:57:54.163339" elapsed="16.160826">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+</test>
+<doc>Login to website</doc>
+<status status="FAIL" start="2026-10-13T17:57:53.112009" elapsed="17.215168"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">critical</stat>
+<stat pass="0" fail="1" skip="0">login</stat>
+</tag>
+<suite>
+<stat name="loginE2E" id="s1" pass="0" fail="1" skip="0">loginE2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

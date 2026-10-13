@@ -5,7 +5,7 @@ Test Tags   login    critical
 Test Teardown  Close Browser
 
 *** Test Cases ***
-Logging into app using valid credentials
+SQA-003 Automation Logging into app using valid credentials
        Open The WebSite  Chrome
        User Login
        Verify Logging into application
