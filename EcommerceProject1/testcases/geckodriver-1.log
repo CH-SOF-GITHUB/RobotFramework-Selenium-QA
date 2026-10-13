@@ -1,0 +1,30 @@
+1791901312945	geckodriver	INFO	Listening on 127.0.0.1:59383
+1791901316511	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59384" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\chaker\\AppData\\Local\\Temp\\rust_mozprofile8L8qFO"
+Dynamically enable window occlusion 0
+1791901317682	Marionette	INFO	Marionette enabled
+1791901317965	Marionette	INFO	Listening on port 59393
+WebDriver BiDi listening on ws://127.0.0.1:59384
+Read port: 59393
+1791901318284	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+JavaScript warning: https://practicesoftwaretesting.com/chunk-XPTZBBTO.js, line 7: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practicesoftwaretesting.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practicesoftwaretesting.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://practicesoftwaretesting.com."
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+JavaScript warning: https://practicesoftwaretesting.com/chunk-XPTZBBTO.js, line 7: unreachable code after return statement
+console.error: AboutNewTabResourceMapping: "train-hop add-on install failure: Error: Failed to install xpi from https://archive.mozilla.org/pub/system-addons/newtab/newtab-159.1.0-build1/newtab.xpi"
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
+console.error: (new RemoteSettingsWorkerError("QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+[WARN  glean_core::upload] Attempted to enqueue a duplicate ping 63d8b879-1f40-4c46-8c6c-5b7427f0659c at /submit/firefox-crashreporter/deletion-request/1/63d8b879-1f40-4c46-8c6c-5b7427f0659c.

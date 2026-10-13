@@ -37,19 +37,21 @@ ${VALID_STREET}  Rue de la Teste
 ${VALID_CITY}  Gabes
 ${VALID_STATE}  Tunisia
 ${VALID_PHONE}  0123456789
-${VALID_EMAIL}  chaker.test.qa+1@yopmail.com
+${VALID_EMAIL}  chaker.test.qa+3@yopmail.com
 ${VALID_PASSWORD}  ChakerSecure#2026!Test
 
 
 *** Keywords ***
 Open The WebSite
-    Open Browser  url=${URL}  browser=Chrome
+    [Arguments]   ${BROWSER}
+    Open Browser  url=${URL}  browser=${BROWSER}
     Maximize Browser Window
 
 Navigate To Register Page
     Click Link     ${REGISTER_PAGE_LINK Locator}
 
 Register New User
+    [Arguments]    ${email}
     Input Text     ${FIRST_NAME_FIELD Locator}           ${VALID_FIRST_NAME}
     Input Text     ${LAST_NAME_FIELD Locator}            ${VALID_LAST_NAME}
     Input Text     ${DOB_FIELD Locator}                  ${VALID_DOB}
@@ -62,12 +64,12 @@ Register New User
     Input Text     ${CITY_FIELD Locator}                 ${VALID_CITY}
     Input Text     ${STATE_FIELD Locator}                ${VALID_STATE}
     Input Text     ${PHONE_FIELD Locator}                ${VALID_PHONE}
-    Input Text     ${EMAIL_FIELD Locator}                ${VALID_EMAIL}
+    Input Text     ${EMAIL_FIELD Locator}                ${email}
     Input Text     ${PASSWORD_FIELD Locator}             ${VALID_PASSWORD}
     Sleep          5s
     Click Button   ${SUBMIT_BTN Locator}
 
-Verify Registering An Accont
+Verify Registering An Account
     ${CurrentURL}  Get Location
     Log To Console  \n Current URL after Register : ${CurrentURL}
     Should Contain  ${CurrentURL}  item=/login
