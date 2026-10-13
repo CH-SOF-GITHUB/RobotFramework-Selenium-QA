@@ -35,5 +35,8 @@ Verify Logging into application
     Log To Console  \nText of Element : ${element_text}
 
 Take Screenshot Of Test result
-    Capture Page Screenshot
-    Log To Console  \nScreenshot Captured Successfully!
+    # 1. Capture de l'image au bon endroit
+    Capture Page Screenshot    filename=${CURDIR}/../junit-results/selenium-screenshot-1.png
+    # 2. Inscription du lien de l'image dans le flux du rapport
+    Log    <img src="selenium-screenshot-1.png">    html=True
+    Log To Console             \nScreenshot Captured Successfully!
