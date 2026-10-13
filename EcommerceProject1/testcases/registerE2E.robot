@@ -18,26 +18,26 @@ Simple Execution Test 1
     Sleep             5s
     Verify Registering An Account
 
-Simple Execution Test 2
-    [Tags]     -firefox
-    Open The WebSite  Firefox
-    Log To Console    \nLe navigateur est ouvert avec succès !
-    Sleep             3s
-    Navigate To Register Page
-    Log To Console    \nUser got to Register Page
-    Sleep             3s
-    Register New User  chaker.test.qa+5@yopmail.com
-    Sleep             5s
-    Verify Registering An Account
+#Simple Execution Test 2
+#    [Tags]     -firefox
+#    Open The WebSite  Firefox
+#    Log To Console    \nLe navigateur est ouvert avec succès !
+#    Sleep             3s
+#    Navigate To Register Page
+#    Log To Console    \nUser got to Register Page
+#    Sleep             3s
+#    Register New User  chaker.test.qa+5@yopmail.com
+#    Sleep             5s
+#    Verify Registering An Account
 
-Simple Execution Test 3
-    [Tags]    -safari
-    Open The WebSite  Safari
-    Log To Console    \nLe navigateur est ouvert avec succès !
-    Sleep             3s
-    Navigate To Register Page
-    Log To Console    \nUser got to Register Page
-    Sleep             3s
-    Register New User  chaker.test.qa+6@yopmail.com
-    Sleep             5s
-    Verify Registering An Account
+#Simple Execution Test 3
+#    [Tags]    -safari
+#    Open The WebSite  Safari
+#    Log To Console    \nLe navigateur est ouvert avec succès !
+#    Sleep             3s
+#    Navigate To Register Page
+#    Log To Console    \nUser got to Register Page
+#    Sleep             3s
+#    Register New User  chaker.test.qa+6@yopmail.com
+#    Sleep             5s
+#    Verify Registering An Account

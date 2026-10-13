@@ -28,3 +28,6 @@ JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: Inva
 console.log: "RemoteSettingsWorker error: QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations."
 console.error: (new RemoteSettingsWorkerError("QuotaExceededError: IndexedDB:  execute() The current transaction exceeded its quota limitations.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
 [WARN  glean_core::upload] Attempted to enqueue a duplicate ping 63d8b879-1f40-4c46-8c6c-5b7427f0659c at /submit/firefox-crashreporter/deletion-request/1/63d8b879-1f40-4c46-8c6c-5b7427f0659c.
+console.error: "buildList failed: " [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1791905398600	Marionette	INFO	Stopped listening on port 59393
+Dynamically enable window occlusion 1
