@@ -1,11 +1,12 @@
 *** Settings ***
 Documentation   Login to website
 Resource  ../resources/login_resource.resource
-Test Tags        login    critical
+Test Tags   login    critical
+Test Teardown  Close Browser
 
 *** Test Cases ***
 Logging into app using valid credentials
        Open The WebSite  Chrome
        User Login
        Verify Logging into application
-       Log To Console  \nLogin Test Passed\n
+       Take Screenshot Of Test result

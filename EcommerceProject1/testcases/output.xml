@@ -1,88 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-13T16:24:29.853922" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-13T16:51:02.290891" rpa="false" schemaversion="5">
 <suite id="s1" name="loginE2E" source="E:\PycharmProjects\automation\RobotFramework\EcommerceProject1\testcases\loginE2E.robot">
-<test id="s1-t1" name="Logging into app using valid credentials" line="7">
+<test id="s1-t1" name="Logging into app using valid credentials" line="8">
 <kw name="Open The WebSite" owner="login_resource">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-13T16:24:30.254152" level="INFO">Opening browser 'Chrome' to base url 'https://practicesoftwaretesting.com/auth/login'.</msg>
+<msg time="2026-10-13T16:51:02.901825" level="INFO">Opening browser 'Chrome' to base url 'https://practicesoftwaretesting.com/auth/login'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-13T16:24:30.253149" elapsed="3.237136"/>
+<status status="PASS" start="2026-10-13T16:51:02.901825" elapsed="3.552494"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-13T16:24:33.490285" elapsed="0.058138"/>
+<status status="PASS" start="2026-10-13T16:51:06.455319" elapsed="0.046234"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-13T16:24:38.550933" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-13T16:51:11.504114" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-13T16:24:33.549421" elapsed="5.001512"/>
+<status status="PASS" start="2026-10-13T16:51:06.502554" elapsed="5.001560"/>
 </kw>
 <arg>Chrome</arg>
-<status status="PASS" start="2026-10-13T16:24:30.252142" elapsed="8.300861"/>
+<status status="PASS" start="2026-10-13T16:51:02.900829" elapsed="8.603285"/>
 </kw>
 <kw name="User Login" owner="login_resource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-13T16:24:38.560337" level="INFO">Typing text 'bchaker28@yahoo.com' into text field 'id:email'.</msg>
+<msg time="2026-10-13T16:51:11.506229" level="INFO">Typing text 'bchaker28@yahoo.com' into text field 'id:email'.</msg>
 <arg>${EMAIL_FIELD Locator}</arg>
 <arg>bchaker28@yahoo.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T16:24:38.560337" elapsed="0.200548"/>
+<status status="PASS" start="2026-10-13T16:51:11.506229" elapsed="0.153502"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-13T16:24:38.760885" level="INFO">Typing text 'ChakerSecure#2026!Test' into text field 'id:password'.</msg>
+<msg time="2026-10-13T16:51:11.659731" level="INFO">Typing text 'ChakerSecure#2026!Test' into text field 'id:password'.</msg>
 <arg>${PASSWORD_FIELD Locator}</arg>
 <arg>ChakerSecure#2026!Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T16:24:38.760885" elapsed="0.117497"/>
+<status status="PASS" start="2026-10-13T16:51:11.659731" elapsed="0.138345"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-10-13T16:24:38.878382" level="INFO">Clicking button 'xpath://input[@value='Connexion']'.</msg>
+<msg time="2026-10-13T16:51:11.798076" level="INFO">Clicking button 'xpath://input[@value='Connexion']'.</msg>
 <arg>${LOGIN_BUTTON Locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T16:24:38.878382" elapsed="0.104719"/>
+<status status="PASS" start="2026-10-13T16:51:11.798076" elapsed="0.090913"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-13T16:24:41.983841" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-10-13T16:51:14.889128" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-13T16:24:38.983101" elapsed="3.000740"/>
+<status status="PASS" start="2026-10-13T16:51:11.888989" elapsed="3.000139"/>
 </kw>
-<status status="PASS" start="2026-10-13T16:24:38.557044" elapsed="3.426797"/>
+<status status="PASS" start="2026-10-13T16:51:11.505147" elapsed="3.383981"/>
 </kw>
 <kw name="Verify Logging into application" owner="login_resource">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-10-13T16:24:41.993611" level="INFO">${CurrentURL} = https://practicesoftwaretesting.com/account</msg>
+<msg time="2026-10-13T16:51:14.889128" level="INFO">${CurrentURL} = https://practicesoftwaretesting.com/account</msg>
 <var>${CurrentURL}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-10-13T16:24:41.983841" elapsed="0.009770"/>
+<status status="PASS" start="2026-10-13T16:51:14.889128" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n Current URL after Login : ${CurrentURL}\n</arg>
+<arg>\n Current URL after Login : ${CurrentURL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-13T16:24:41.993611" elapsed="0.012429"/>
+<status status="PASS" start="2026-10-13T16:51:14.903822" elapsed="0.000000"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${CurrentURL}</arg>
 <arg>item=/account</arg>
 <doc>Fails if the `container` does not contain the `item` one or more times.</doc>
-<status status="PASS" start="2026-10-13T16:24:42.006040" elapsed="0.001852"/>
+<status status="PASS" start="2026-10-13T16:51:14.906036" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-10-13T16:24:41.983841" elapsed="0.024051"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-13T16:51:14.921712" level="INFO">Element 'xpath://h1[normalize-space()='Mon compte']' is displayed.</msg>
+<arg>${MY_COMPTE Locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-13T16:51:14.906036" elapsed="0.015676"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-13T16:51:14.938971" level="INFO">${element_text} = Mon compte</msg>
+<var>${element_text}</var>
+<arg>${MY_COMPTE Locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-13T16:51:14.921712" elapsed="0.017259"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nLogin Test Passed\n</arg>
+<arg>\nText of Element : ${element_text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-13T16:24:42.007892" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-13T16:51:14.938971" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-10-13T16:51:14.889128" elapsed="0.049843"/>
+</kw>
+<kw name="Take Screenshot Of Test result" owner="login_resource">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-13T16:51:15.127813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-13T16:51:14.938971" elapsed="0.188842"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nScreenshot Captured Successfully!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-13T16:51:15.127813" elapsed="0.000974"/>
+</kw>
+<status status="PASS" start="2026-10-13T16:51:14.938971" elapsed="0.189816"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-13T16:51:15.128787" elapsed="2.638248"/>
 </kw>
 <tag>critical</tag>
 <tag>login</tag>
-<status status="PASS" start="2026-10-13T16:24:30.251635" elapsed="11.756257"/>
+<status status="PASS" start="2026-10-13T16:51:02.899831" elapsed="14.868282"/>
 </test>
 <doc>Login to website</doc>
-<status status="PASS" start="2026-10-13T16:24:29.854919" elapsed="12.152973"/>
+<status status="PASS" start="2026-10-13T16:51:02.293900" elapsed="15.477160"/>
 </suite>
 <statistics>
 <total>
