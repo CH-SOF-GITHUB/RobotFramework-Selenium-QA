@@ -13,6 +13,7 @@ ${DOB_FIELD Locator}  id:dob
 ${COUNTRY_DROPDOWN Locator}  id=country
 ${POSTAL_CODE_FIELD Locator}  id:postal_code
 ${STREET_NUMBER_FIELD Locator}  id:house_number
+${STREET_FIELD Locator}  id:street
 ${CITY_FIELD Locator}  id:city
 ${STATE_FIELD Locator}  id:state
 ${PHONE_FIELD Locator}  id:phone
@@ -32,14 +33,45 @@ ${COUNTRY_NAME_ALBANIA}  Albania
 ${COUNTRY_NAME_TUNISIA}  Tunisia
 ${VALID_POSTAL_CODE}  75009
 ${VALID_STREET_NUMBER}  123
+${VALID_STREET}  Rue de la Teste
 ${VALID_CITY}  Gabes
 ${VALID_STATE}  Tunisia
 ${VALID_PHONE}  0123456789
 ${VALID_EMAIL}  chaker.test.qa+1@yopmail.com
-${VALID_PASSWORD}  Password123!
+${VALID_PASSWORD}  ChakerSecure#2026!Test
 
 
 *** Keywords ***
 Open The WebSite
     Open Browser  url=${URL}  browser=Chrome
     Maximize Browser Window
+
+Navigate To Register Page
+    Click Link     ${REGISTER_PAGE_LINK Locator}
+
+Register New User
+    Input Text     ${FIRST_NAME_FIELD Locator}           ${VALID_FIRST_NAME}
+    Input Text     ${LAST_NAME_FIELD Locator}            ${VALID_LAST_NAME}
+    Input Text     ${DOB_FIELD Locator}                  ${VALID_DOB}
+    Mouse Over     ${COUNTRY_DROPDOWN Locator}
+    Click Element  ${COUNTRY_DROPDOWN Locator}
+    Select From List By Value    ${COUNTRY_DROPDOWN Locator}    ${COUNTRY_CODE_TUNISIA}
+    Input Text     ${POSTAL_CODE_FIELD Locator}          ${VALID_POSTAL_CODE}
+    Input Text     ${STREET_NUMBER_FIELD Locator}        ${VALID_STREET_NUMBER}
+    Input Text     ${STREET_FIELD Locator}               ${VALID_STREET}
+    Input Text     ${CITY_FIELD Locator}                 ${VALID_CITY}
+    Input Text     ${STATE_FIELD Locator}                ${VALID_STATE}
+    Input Text     ${PHONE_FIELD Locator}                ${VALID_PHONE}
+    Input Text     ${EMAIL_FIELD Locator}                ${VALID_EMAIL}
+    Input Text     ${PASSWORD_FIELD Locator}             ${VALID_PASSWORD}
+    Sleep          5s
+    Click Button   ${SUBMIT_BTN Locator}
+
+Verify Registering An Accont
+    ${CurrentURL}  Get Location
+    Log To Console  \n Current URL after Register : ${CurrentURL}
+    Should Contain  ${CurrentURL}  item=/login
+
+Run The Test Cases
+    # TODO: implement keyword "Run The Test Cases".
+    Log To Console  Test Executed
