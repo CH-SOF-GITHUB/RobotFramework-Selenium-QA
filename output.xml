@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-13T18:01:38.176703" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-13T18:04:19.817491" rpa="false" schemaversion="5">
 <suite id="s1" name="loginE2E" source="E:\PycharmProjects\automation\RobotFramework\EcommerceProject1\testcases\loginE2E.robot">
-<test id="s1-t1" name="SQA-003 Automation Logging into app using valid credentials" line="8">
+<test id="s1-t1" name="SQA-003" line="8">
 <kw name="Open The WebSite" owner="login_resource">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-13T18:01:39.170292" level="INFO">Opening browser 'Chrome' to base url 'https://practicesoftwaretesting.com/auth/login'.</msg>
+<msg time="2026-10-13T18:04:20.788216" level="INFO">Opening browser 'Chrome' to base url 'https://practicesoftwaretesting.com/auth/login'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-13T18:01:39.169293" elapsed="5.581472"/>
+<status status="PASS" start="2026-10-13T18:04:20.787176" elapsed="5.222634"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-13T18:01:44.751766" elapsed="0.106059"/>
+<status status="PASS" start="2026-10-13T18:04:26.010811" elapsed="0.058736"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-13T18:01:49.859201" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-13T18:04:31.073013" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-13T18:01:44.857825" elapsed="5.001376"/>
+<status status="PASS" start="2026-10-13T18:04:26.071560" elapsed="5.001453"/>
 </kw>
 <arg>Chrome</arg>
-<status status="PASS" start="2026-10-13T18:01:39.168287" elapsed="10.690914"/>
+<status status="PASS" start="2026-10-13T18:04:20.786216" elapsed="10.286797"/>
 </kw>
 <kw name="User Login" owner="login_resource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-13T18:01:49.859201" level="INFO">Typing text 'bchaker28@yahoo.com' into text field 'id:email'.</msg>
+<msg time="2026-10-13T18:04:31.073013" level="INFO">Typing text 'bchaker28@yahoo.com' into text field 'id:email'.</msg>
 <arg>${EMAIL_FIELD Locator}</arg>
 <arg>bchaker28@yahoo.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T18:01:49.859201" elapsed="0.166710"/>
+<status status="PASS" start="2026-10-13T18:04:31.073013" elapsed="0.186064"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-13T18:01:50.025911" level="INFO">Typing text 'ChakerSecure#2026!Test' into text field 'id:password'.</msg>
+<msg time="2026-10-13T18:04:31.259077" level="INFO">Typing text 'ChakerSecure#2026!Test' into text field 'id:password'.</msg>
 <arg>${PASSWORD_FIELD Locator}</arg>
 <arg>ChakerSecure#2026!Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T18:01:50.025911" elapsed="0.126796"/>
+<status status="PASS" start="2026-10-13T18:04:31.259077" elapsed="0.125635"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-10-13T18:01:50.152707" level="INFO">Clicking button 'xpath://input[@value='Connexion']'.</msg>
+<msg time="2026-10-13T18:04:31.384712" level="INFO">Clicking button 'xpath://input[@value='Connexion']'.</msg>
 <arg>${LOGIN_BUTTON Locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-13T18:01:50.152707" elapsed="0.085186"/>
+<status status="PASS" start="2026-10-13T18:04:31.384712" elapsed="0.078868"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-13T18:01:53.238440" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-10-13T18:04:34.463807" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-13T18:01:50.237893" elapsed="3.000547"/>
+<status status="PASS" start="2026-10-13T18:04:31.463580" elapsed="3.000227"/>
 </kw>
-<status status="PASS" start="2026-10-13T18:01:49.859201" elapsed="3.379239"/>
+<status status="PASS" start="2026-10-13T18:04:31.073013" elapsed="3.390794"/>
 </kw>
 <kw name="Verify Logging into application" owner="login_resource">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-10-13T18:01:53.255098" level="INFO">${CurrentURL} = https://practicesoftwaretesting.com/auth/login</msg>
+<msg time="2026-10-13T18:04:34.466485" level="INFO">${CurrentURL} = https://practicesoftwaretesting.com/auth/login</msg>
 <var>${CurrentURL}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-10-13T18:01:53.238440" elapsed="0.016658"/>
+<status status="PASS" start="2026-10-13T18:04:34.463807" elapsed="0.002678"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nCurrent URL after Login : ${CurrentURL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-13T18:01:53.256100" elapsed="0.000996"/>
+<status status="PASS" start="2026-10-13T18:04:34.466485" elapsed="0.000000"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-10-13T18:01:53.260098" level="FAIL">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</msg>
+<msg time="2026-10-13T18:04:34.466485" level="FAIL">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</msg>
 <arg>${CurrentURL}</arg>
 <arg>item=/account</arg>
 <doc>Fails if the `container` does not contain the `item` one or more times.</doc>
-<status status="FAIL" start="2026-10-13T18:01:53.257096" elapsed="0.004006">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+<status status="FAIL" start="2026-10-13T18:04:34.466485" elapsed="0.000000">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
 <arg>${MY_COMPTE Locator}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-10-13T18:01:53.261102" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-10-13T18:04:34.466485" elapsed="0.000000"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
 <var>${element_text}</var>
 <arg>${MY_COMPTE Locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-10-13T18:01:53.261102" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-10-13T18:04:34.466485" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nText of Element : ${element_text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-10-13T18:01:53.262100" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-10-13T18:04:34.466485" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2026-10-13T18:01:53.238440" elapsed="0.023660">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+<status status="FAIL" start="2026-10-13T18:04:34.463807" elapsed="0.002678">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
 </kw>
 <kw name="Take Screenshot Of Test result" owner="login_resource">
-<status status="NOT RUN" start="2026-10-13T18:01:53.263097" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-10-13T18:04:34.466485" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-13T18:01:53.264151" elapsed="2.694556"/>
+<status status="PASS" start="2026-10-13T18:04:34.466485" elapsed="2.649003"/>
 </kw>
 <tag>critical</tag>
 <tag>login</tag>
-<status status="FAIL" start="2026-10-13T18:01:39.166279" elapsed="16.792428">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
+<status status="FAIL" start="2026-10-13T18:04:20.785179" elapsed="16.330309">'https://practicesoftwaretesting.com/auth/login' does not contain '/account'</status>
 </test>
 <doc>Login to website</doc>
-<status status="FAIL" start="2026-10-13T18:01:38.179706" elapsed="17.780997"/>
+<status status="FAIL" start="2026-10-13T18:04:19.821535" elapsed="17.295960"/>
 </suite>
 <statistics>
 <total>

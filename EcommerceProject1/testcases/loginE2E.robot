@@ -5,7 +5,7 @@ Test Tags   login    critical
 Test Teardown  Close Browser
 
 *** Test Cases ***
-SQA-003
+SQA-002 Verify logging into the Application using valid credentials
        Open The WebSite  Chrome
        User Login
        Verify Logging into application

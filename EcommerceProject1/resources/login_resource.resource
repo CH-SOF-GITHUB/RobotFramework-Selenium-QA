@@ -21,7 +21,7 @@ Open The WebSite
     Sleep  5s
 
 User Login
-    Input Text  ${EMAIL_FIELD Locator}   bchaker28@yahoo.com
+    Input Text  ${EMAIL_FIELD Locator}   bchaker281@yahoo.com
     Input Text  ${PASSWORD_FIELD Locator}  ChakerSecure#2026!Test
     Click Button  ${LOGIN_BUTTON Locator}
     Sleep  3s
