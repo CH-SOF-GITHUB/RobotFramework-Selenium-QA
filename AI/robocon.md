@@ -23,10 +23,6 @@ Please save your secret key in a safe place since you won't be able to view it a
 as anyone with your API key can make requests on your behalf. If you do lose it, you'll need to generate a new one.
 
 Learn more about API key best practices
-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
-
-
-$env:OPENAI_KEY = "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"
 
 ========================================================================================================================
 The Evolution of Test Automation
