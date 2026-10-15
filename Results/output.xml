@@ -1,100 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-12T16:20:02.998433" rpa="false" schemaversion="5">
-<suite id="s1" name="RobotFramework" source="E:\PycharmProjects\automation\RobotFramework">
-<suite id="s1-s1" name="Tests" source="E:\PycharmProjects\automation\RobotFramework\Tests">
-<suite id="s1-s1-s1" name="One" source="E:\PycharmProjects\automation\RobotFramework\Tests\one.robot">
-<test id="s1-s1-s1-t1" name="Invalid Login Test|Scenario" line="30">
-<kw name="Open The Browser">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-15T17:07:23.160892" rpa="false" schemaversion="5">
+<suite id="s1" name="simpleLogin" source="E:\PycharmProjects\robotframework\RobotFramework\SampleTests\simpleLogin.robot">
+<test id="s1-t1" name="Valid Login" line="14">
+<kw name="Open Browser To Login Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-12T16:20:03.919436" level="INFO">Opening browser 'Chrome' to base url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'.</msg>
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
+<msg time="2026-10-15T17:07:24.681529" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-12T16:20:03.918439" elapsed="6.542756"/>
+<status status="PASS" start="2026-10-15T17:07:24.677542" elapsed="8.205963"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-12T16:20:10.462201" elapsed="0.048572"/>
+<status status="PASS" start="2026-10-15T17:07:32.888506" elapsed="0.083364"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-12T16:20:15.513153" level="INFO">Slept 5 seconds.</msg>
-<arg>time_=5s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-12T16:20:10.511775" elapsed="5.001378"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-10-15T17:07:32.973856" elapsed="0.005992"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message=Browser Initialized</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-12T16:20:15.514162" elapsed="0.000000"/>
+<kw name="Login Page Should Be Open">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-15T17:07:33.001761" level="INFO">Page title is 'The Internet'.</msg>
+<arg>The Internet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-10-15T17:07:32.985866" elapsed="0.015895"/>
 </kw>
-<status status="PASS" start="2026-10-12T16:20:03.917431" elapsed="11.597731"/>
+<status status="PASS" start="2026-10-15T17:07:32.979848" elapsed="0.021913"/>
 </kw>
-<kw name="Login2 To Portal">
+<status status="PASS" start="2026-10-15T17:07:24.669491" elapsed="8.332270"/>
+</kw>
+<kw name="Input Username">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-12T16:20:15.517162" level="INFO">Typing text 'demolambdatestio@yopmail.com' into text field 'id:input-email'.</msg>
-<arg>locator=${Email Locator}</arg>
-<arg>text=${Email2}</arg>
+<msg time="2026-10-15T17:07:33.005788" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-12T16:20:15.516163" elapsed="0.143667"/>
+<status status="PASS" start="2026-10-15T17:07:33.003776" elapsed="0.364159"/>
 </kw>
+<arg>tomsmith</arg>
+<status status="PASS" start="2026-10-15T17:07:33.003776" elapsed="0.364159"/>
+</kw>
+<kw name="Input Password">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-12T16:20:15.659830" level="INFO">Typing text 'Admin12345!' into text field 'id:input-password'.</msg>
-<arg>locator=${Password Locator}</arg>
-<arg>text=${Password2}</arg>
+<msg time="2026-10-15T17:07:33.367935" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-12T16:20:15.659830" elapsed="0.097235"/>
+<status status="PASS" start="2026-10-15T17:07:33.367935" elapsed="0.354570"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-12T16:20:15.767511" level="INFO">Clicking element '//input[@value='Login']'.</msg>
-<arg>locator=${Login Button Locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-12T16:20:15.757065" elapsed="0.078441"/>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2026-10-15T17:07:33.367935" elapsed="0.354570"/>
 </kw>
-<status status="PASS" start="2026-10-12T16:20:15.515162" elapsed="0.320344"/>
+<kw name="Submit Credentials">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-15T17:07:33.722505" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-15T17:07:33.722505" elapsed="0.801226"/>
 </kw>
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-10-12T16:20:16.388175" level="INFO">${currentURL} = https://ecommerce-playground.lambdatest.io/index.php?route=account/login</msg>
-<var>${currentURL}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-10-12T16:20:15.835506" elapsed="0.552669"/>
+<status status="PASS" start="2026-10-15T17:07:33.722505" elapsed="0.803283"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\n Acutal URL : ${currentURL}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-12T16:20:16.388175" elapsed="0.001960"/>
+<kw name="Welcome Page Should Be Open">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-15T17:07:34.548365" level="INFO">Current location is 'https://the-internet.herokuapp.com/secure'.</msg>
+<arg>${SECURE_LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-15T17:07:34.534257" elapsed="0.014108"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-10-12T16:20:16.391145" level="FAIL">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</msg>
-<arg>${currentURL}</arg>
-<arg>item=/account</arg>
-<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
-<status status="FAIL" start="2026-10-12T16:20:16.390135" elapsed="0.006003">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</status>
+<status status="PASS" start="2026-10-15T17:07:34.530288" elapsed="0.018077"/>
 </kw>
-<kw name="Close The Browser">
-<status status="NOT RUN" start="2026-10-12T16:20:16.397166" elapsed="0.000000"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-15T17:07:34.548365" elapsed="3.298976"/>
 </kw>
-<tag>critical</tag>
-<tag>login</tag>
-<status status="FAIL" start="2026-10-12T16:20:03.913431" elapsed="12.484706">'https://ecommerce-playground.lambdatest.io/index.php?route=account/login' does not contain '/account'</status>
+<status status="PASS" start="2026-10-15T17:07:24.667494" elapsed="13.180643"/>
 </test>
-<status status="FAIL" start="2026-10-12T16:20:03.107431" elapsed="13.300879"/>
-</suite>
-<status status="FAIL" start="2026-10-12T16:20:03.101435" elapsed="13.309877"/>
-</suite>
-<status status="FAIL" start="2026-10-12T16:20:03.012432" elapsed="13.401881"/>
+<doc>Simple Example using SeleniumLibrary</doc>
+<status status="PASS" start="2026-10-15T17:07:23.163892" elapsed="14.686283"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">critical</stat>
-<stat pass="0" fail="1" skip="0">login</stat>
 </tag>
 <suite>
-<stat name="RobotFramework" id="s1" pass="0" fail="1" skip="0">RobotFramework</stat>
-<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">RobotFramework.Tests</stat>
-<stat name="One" id="s1-s1-s1" pass="0" fail="1" skip="0">RobotFramework.Tests.One</stat>
+<stat name="simpleLogin" id="s1" pass="1" fail="0" skip="0">simpleLogin</stat>
 </suite>
 </statistics>
 <errors>

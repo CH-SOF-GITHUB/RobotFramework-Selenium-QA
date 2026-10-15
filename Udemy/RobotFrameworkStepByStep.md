@@ -302,4 +302,66 @@ Step 5: Show the Results of execution
 ![img_7.png](img_7.png)
 ![img_8.png](img_8.png)
 
+========================================================================================================================
+TIPS & TRICKS:
+How to INSTALL, UNINSTALL, UPGRADE
 
+Today we will learn:
+-------------------
+1. Different ways to install Robot Framework
+2. How to verify Installation
+3. How to upgrade to latest version
+4. How to download and install
+5. How to uninstall
+
+Useful TIPS:
+INSTALL:
+1. Install latest version: pip install robotframework
+2. Install specific version: pip install robotframework==2.9.0
+3. Do a fresh Install ignoring cached files: pip install --no-cache-dir robotframework, For example if I do:              
+   pip uninstall robotframework and after that I do: pip install robotframework , then The Terminal will show a message:
+   `Using cached robotframework-3.0.2.tar.gz`
+
+VERIFY INSTALLATION: robot --version
+
+UPGRADE: pip install --upgrade robotframework
+         `Requirement already up-to-date: robot framework in c:\python27\lib\site-packages`
+
+DOWNLOAD RobotFramework:
+pip download robotframework
+`Collecting robotframework
+   Downloading robotframework-3.0.2.tar.gz (440kB)
+     100% FEEHARAASAAAAAAAAIAAARAARAAAARAT 450kB 153kB/s
+   Saved c:\users\chaker\robotframework-3.0.2.tar.gz
+Successfully downloaded robotframework
+`
+After That: pip install robotframework-3.0.2.tar.gz
+
+UNINSTALL: pip uninstall robotframework
+
+Useful TIPS: rebot
+             Rebot is Robot Framework report and log generator
+
+========================================================================================================================
+SOME USEFUL TIPS - commands
+
+robot --version
+robot --help
+pip freeze
+pip list
+pip show
+pip check
+
+========================================================================================================================
+QUIZ:
+1° What is the purpose of *** Settings *** ?
+To define Setup, Teardown, and Import Libraries.
+
+2° What is the purpose of Tags ?
+To categorize/filter test cases be executed.
+
+3° How can you run a specific tag from the command line ?
+robot --include <tagname>
+
+4° How can you run Robot tests in Jenkins?
+Install Robot Plugin.
