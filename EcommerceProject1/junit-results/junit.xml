@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="loginE2E" tests="1" errors="0" failures="0" skipped="0" time="16.512" timestamp="2026-10-13T18:52:03.786502">
+<testcase classname="loginE2E" name="SQA-002 Verify logging into the Application using valid credentials" time="16.092">
+</testcase>
+<properties>
+<property name="Documentation" value="Login to website"/>
+</properties>
+</testsuite>

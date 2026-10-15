@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 
 *** Variables ***
-# URL of Tests #
+# URL of SampleTests #
 ${URL}   https://practicesoftwaretesting.com/auth/login
 # email and password mandatory fields
 ${EMAIL_FIELD Locator}  id:email
