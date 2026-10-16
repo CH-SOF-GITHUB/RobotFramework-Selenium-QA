@@ -1,114 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-16T13:15:10.632000" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Mouse Actions" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_mouse_actions.robot">
-<test id="s1-t1" name="Example 2: [Playground] Actions Chains Robot Framework" line="14">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-16T15:55:15.068281" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Keyboard Actions" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_keyboard_actions.robot">
+<test id="s1-t1" name="Example 1: [Playground] Send Keys Demo with Robot Framework" line="28">
 <kw name="Open Test Browser" owner="Common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-16T13:15:11.710267" level="INFO">Opening browser 'Chrome' to base url 'https://ecommerce-playground.lambdatest.io/'.</msg>
+<msg time="2026-10-16T15:55:15.993919" level="INFO">Opening browser 'Chrome' to base url 'https://www.testmuai.com/selenium-playground/'.</msg>
 <arg>${TEST_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-16T13:15:11.704590" elapsed="7.386660"/>
+<status status="PASS" start="2026-10-16T15:55:15.979429" elapsed="6.408739"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-16T13:15:19.095241" elapsed="0.275379"/>
+<status status="PASS" start="2026-10-16T15:55:22.390167" elapsed="0.473223"/>
 </kw>
 <arg>TEST_URL=${site_url_1}</arg>
 <arg>BROWSER=Chrome</arg>
 <timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-16T13:15:11.703590" elapsed="7.667030"/>
+<status status="PASS" start="2026-10-16T15:55:15.975408" elapsed="6.888984"/>
 </kw>
-<kw name="Move to Element" owner="Common">
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2026-10-16T13:15:20.874662" level="INFO">${menu_item} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8b6bb66ab9fc91c7dac06bce88585816", element="f.6CDBAD0352AE5C0F20472FB382944CFA.d.B5DCDF1AC5173F2F9CB365A84CFE1A78.e.34")&gt;</msg>
-<var>${menu_item}</var>
-<arg>partial link=${MENU_ITEM}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2026-10-16T13:15:19.372517" elapsed="1.502145"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:22.974414" level="INFO">Current page contains element '//a[normalize-space()='Input Form Submit']'.</msg>
+<arg>${SubmitButton}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-10-16T15:55:22.873796" elapsed="0.100618"/>
 </kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2026-10-16T13:15:20.881708" level="INFO">Simulating Mouse Over on element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b6bb66ab9fc91c7dac06bce88585816", element="f.6CDBAD0352AE5C0F20472FB382944CFA.d.B5DCDF1AC5173F2F9CB365A84CFE1A78.e.34")&gt;'.</msg>
-<arg>${menu_item}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2026-10-16T13:15:20.874662" elapsed="0.419974"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T13:15:23.300563" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T13:15:21.295634" elapsed="2.004929"/>
-</kw>
-<doc>Hover over the menu item</doc>
-<status status="PASS" start="2026-10-16T13:15:19.372517" elapsed="3.929081"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T13:15:26.307255" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T13:15:23.303655" elapsed="3.003600"/>
-</kw>
-<kw name="Click Menu Item" owner="Common">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-10-16T13:15:26.311326" level="INFO">Clicking link 'partial link=Designs'.</msg>
-<arg>partial link=${DESIGN_ITEM}</arg>
+<msg time="2026-10-16T15:55:22.978631" level="INFO">Clicking link '//a[normalize-space()='Input Form Submit']'.</msg>
+<arg>${SubmitButton}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T13:15:26.309326" elapsed="5.089712"/>
+<status status="PASS" start="2026-10-16T15:55:22.976428" elapsed="1.420889"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T13:15:41.400542" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T13:15:31.399038" elapsed="10.001504"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:24.535964" level="INFO">Current page contains element 'name:name'.</msg>
+<arg>locator=${NameField}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-10-16T15:55:24.410852" elapsed="0.133895"/>
 </kw>
-<doc>Click the submenu item once it opens up</doc>
-<status status="PASS" start="2026-10-16T13:15:26.308277" elapsed="15.092265"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:24.551052" level="INFO">Typing text 'TestName' into text field 'name:name'.</msg>
+<arg>${NameField}</arg>
+<arg>TestName</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:24.548784" elapsed="1.823945"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T13:15:43.404706" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T13:15:41.400542" elapsed="2.004164"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:26.400880" level="INFO">Typing text 'testing@gmail.com' into text field 'xpath://input[@id='inputEmail4']'.</msg>
+<arg>${EmailField}</arg>
+<arg>testing@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:26.379599" elapsed="0.883820"/>
 </kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-10-16T13:15:43.431186" level="INFO">${curr_page_title} = Designs</msg>
-<var>${curr_page_title}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-10-16T13:15:43.406794" elapsed="0.024392"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:27.271791" level="INFO">Typing text 'Password1' into text field 'xpath://input[@id='inputPassword4']'.</msg>
+<arg>${PasswordField}</arg>
+<arg>Password1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:27.267478" elapsed="2.542459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:29.816591" level="INFO">Typing text 'LambdaTest' into text field '//input[@id='company']'.</msg>
+<arg>${CompanyField}</arg>
+<arg>LambdaTest</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:29.811966" elapsed="5.372527"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:35.195370" level="INFO">Typing text 'https://www.testmuai.com' into text field '//input[@id='websitename']'.</msg>
+<arg>${WebsiteField}</arg>
+<arg>https://www.testmuai.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:35.189026" elapsed="0.689219"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:35.881267" level="INFO">Selecting options from selection list '//select[@name='country']' by value US.</msg>
+<arg>${CountryDropDown}</arg>
+<arg>US</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-10-16T15:55:35.880266" elapsed="0.597429"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:36.491240" level="INFO">Typing text 'San Jose' into text field '//input[@id='inputCity']'.</msg>
+<arg>${CityField}</arg>
+<arg>San Jose</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:36.477695" elapsed="0.496802"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:36.978496" level="INFO">Typing text 'Googleplex, 1600 Amphitheatre Pkwy' into text field '//input[@id='inputAddress1']'.</msg>
+<arg>${Address1Field}</arg>
+<arg>Googleplex, 1600 Amphitheatre Pkwy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:36.976496" elapsed="0.583826"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:37.562327" level="INFO">Typing text 'Mountain View, CA 94043' into text field '//input[@id='inputAddress2']'.</msg>
+<arg>${Address2Field}</arg>
+<arg>Mountain View, CA 94043</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:37.561317" elapsed="0.348264"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:37.912571" level="INFO">Typing text 'calefornia' into text field '//input[@id='inputState']'.</msg>
+<arg>${StateField}</arg>
+<arg>text=calefornia</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:37.911577" elapsed="0.246977"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:38.161552" level="INFO">Typing text '94088' into text field '//input[@id='inputZip']'.</msg>
+<arg>${ZipCodeField}</arg>
+<arg>text=94088</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:38.159547" elapsed="0.255266"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:38.417808" level="INFO">Clicking button '//*[@id='seleniumform']/div[6]/button'.</msg>
+<arg>${FinalSubmission}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T15:55:38.415812" elapsed="0.578347"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:39.040766" level="INFO">Executing JavaScript:
+window.scrollTo(0, 0)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, 0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-16T15:55:39.010391" elapsed="0.089672"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:39.463334" level="INFO">Current page contains text 'Thanks for contacting us, we will get back to you shortly.'.</msg>
+<arg>${SuccessText}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-16T15:55:39.124057" elapsed="0.339277"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:39.486703" level="INFO">${CurrentURL} = https://www.testmuai.com/selenium-playground/input-form-demo/</msg>
+<var>${CurrentURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-10-16T15:55:39.463334" elapsed="0.023369"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${curr_page_title}</arg>
+<arg>Current URL after Submit Form: ${CurrentURL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T13:15:43.432182" elapsed="0.002007"/>
+<status status="PASS" start="2026-10-16T15:55:39.486703" elapsed="0.004417"/>
 </kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${curr_page_title}</arg>
-<arg>${extected_title}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-10-16T13:15:43.435176" elapsed="0.002967"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-16T15:55:39.533353" level="INFO">Current location is 'https://www.testmuai.com/selenium-playground/input-form-demo/'.</msg>
+<arg>${ExpectedURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-16T15:55:39.491120" elapsed="0.042233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T15:55:41.543180" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T15:55:39.534234" elapsed="2.008946"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-16T15:55:41.543180" level="INFO">Completed - Example 2: [Playground] Parallel Testing with Robot framework</msg>
+<arg>Completed - Example 2: [Playground] Parallel Testing with Robot framework</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-16T15:55:41.543180" elapsed="0.000000"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-16T13:15:43.439141" elapsed="3.406383"/>
+<status status="PASS" start="2026-10-16T15:55:41.553795" elapsed="3.856174"/>
 </kw>
-<status status="PASS" start="2026-10-16T13:15:43.439141" elapsed="3.407388"/>
+<status status="PASS" start="2026-10-16T15:55:41.550161" elapsed="3.861811"/>
 </kw>
-<tag>Action Chains Robot Framework</tag>
+<tag>Selenium Playground Automation</tag>
 <timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-16T13:15:11.701553" elapsed="35.146972"/>
+<status status="PASS" start="2026-10-16T15:55:15.971899" elapsed="29.442091"/>
 </test>
-<status status="PASS" start="2026-10-16T13:15:10.638140" elapsed="36.214390"/>
+<status status="PASS" start="2026-10-16T15:55:15.072933" elapsed="30.347021"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Action Chains Robot Framework</stat>
+<stat pass="1" fail="0" skip="0">Selenium Playground Automation</stat>
 </tag>
 <suite>
-<stat name="Test Mouse Actions" id="s1" pass="1" fail="0" skip="0">Test Mouse Actions</stat>
+<stat name="Test Keyboard Actions" id="s1" pass="1" fail="0" skip="0">Test Keyboard Actions</stat>
 </suite>
 </statistics>
 <errors>

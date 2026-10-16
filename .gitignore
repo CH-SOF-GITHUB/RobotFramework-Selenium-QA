@@ -1,11 +1,6 @@
-# Environnement et secrets
-.env
-
-# Dossiers virtuels et caches
 .venv/
-.robotcode_cache/
-
-# Fichiers système
-__pycache__/
-*.pyc
-.idea/
+node_modules/
+.env
+*.html
+*.xml
+*.png
