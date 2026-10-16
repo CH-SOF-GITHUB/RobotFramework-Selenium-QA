@@ -69,3 +69,48 @@ Example 1: [Playground] Send Keys Demo with Robot Framework
    Location Should Be   ${ExpectedURL}
    Sleep   2s
    Log    Completed - Example 2: [Playground] Parallel Testing with Robot framework
+
+Example 2: [Playground] Press Keys Demo with Robot Framework
+   [Tags]      PressKeys
+   [Timeout]   ${TIMEOUT}
+   Open Test Browser  TEST_URL=${site_url_1}  BROWSER=Chrome
+   Page Should Contain Element    ${SubmitButton}
+   Click Link  ${SubmitButton}
+   Page Should Contain Element    locator=${NameField}
+
+   # 1. Enter details in the input form
+   # Name
+   Press Key  ${NameField}   Himanshu+SPACE+Sheth
+   # Email
+   Press Keys  ${EmailField}  testing@gmail.com
+   # Password
+   Press Keys  ${PasswordField}  Password1
+   # Company
+   Press Keys  ${CompanyField}   LambdaTest
+   # Website
+   Press Keys  ${WebsiteField}   https://www.testmuai.com
+   # Country
+   Select From List By Value     ${CountryDropDown}      US
+   # City
+   Press Keys  ${CityField}      San Jose
+   # Address 1
+   Press Keys  ${Address1Field}  Googleplex, 1600 Amphitheatre Pkwy
+   # Address 2
+   Press Keys  ${Address2Field}  Mountain View, CA 94043
+   # State
+   Press Keys  ${StateField}   text=calefornia
+   # Zip Code
+   Press Keys  ${ZipCodeField}  text=94088
+   # Click on submit button
+   Click Button   ${FinalSubmission}
+   # Go back to the top of the page instantly.
+   Execute Javascript  window.scrollTo(0, 0)
+   # Check the validation of Input Form
+   ## 2. Verify the presence of succes Text
+   Page Should Contain   ${SuccessText}
+   ### 3. Retreive Current URL and compare it with expected URL
+   ${CurrentURL}=       Get Location
+   Log To Console       Current URL after Submit Form: ${CurrentURL}
+   Location Should Be   ${ExpectedURL}
+   Sleep   2s
+   Log    Completed - Example 2: [Playground] PressKeys Testing with Robot framework
