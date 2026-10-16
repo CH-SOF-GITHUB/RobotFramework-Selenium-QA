@@ -22,7 +22,7 @@ Move to Element
      [Documentation]   Hover over the menu item
      ${menu_item}=  Get WebElement   partial link=${MENU_ITEM}
      Mouse Over  ${menu_item}
-     Sleep  2s      #equivalent of time.sleep(2)
+     Sleep  2s       #equivalent of time.sleep(2)
 
 Click Menu Item
      [Documentation]  Click the submenu item once it opens up
