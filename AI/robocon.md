@@ -76,7 +76,7 @@ Key Components
 ========================================================================================================================
 Test Data Generator
 ° Functionality
-   ° Uses Al to create authentic and diverse test data
+   ° Uses AI to create authentic and diverse test data
 ° Supported Data Types
    ° Addresses, phone numbers and user data
 ° Customization Options

@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-# URL of SampleTests #
+# URL of DemoTests #
 ${URL}   https://practicesoftwaretesting.com/auth/login
 # URL to access to Register Page #
 ${REGISTER_PAGE_LINK Locator}  //a[normalize-space()='Enregistrez votre compte']

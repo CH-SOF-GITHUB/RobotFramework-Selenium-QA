@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-16T13:15:10.632000" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Mouse Actions" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_mouse_actions.robot">
+<test id="s1-t1" name="Example 2: [Playground] Actions Chains Robot Framework" line="14">
+<kw name="Open Test Browser" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:15:11.710267" level="INFO">Opening browser 'Chrome' to base url 'https://ecommerce-playground.lambdatest.io/'.</msg>
+<arg>${TEST_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-16T13:15:11.704590" elapsed="7.386660"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-16T13:15:19.095241" elapsed="0.275379"/>
+</kw>
+<arg>TEST_URL=${site_url_1}</arg>
+<arg>BROWSER=Chrome</arg>
+<timeout value="50 minutes"/>
+<status status="PASS" start="2026-10-16T13:15:11.703590" elapsed="7.667030"/>
+</kw>
+<kw name="Move to Element" owner="Common">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:15:20.874662" level="INFO">${menu_item} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8b6bb66ab9fc91c7dac06bce88585816", element="f.6CDBAD0352AE5C0F20472FB382944CFA.d.B5DCDF1AC5173F2F9CB365A84CFE1A78.e.34")&gt;</msg>
+<var>${menu_item}</var>
+<arg>partial link=${MENU_ITEM}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:15:19.372517" elapsed="1.502145"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:15:20.881708" level="INFO">Simulating Mouse Over on element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b6bb66ab9fc91c7dac06bce88585816", element="f.6CDBAD0352AE5C0F20472FB382944CFA.d.B5DCDF1AC5173F2F9CB365A84CFE1A78.e.34")&gt;'.</msg>
+<arg>${menu_item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:15:20.874662" elapsed="0.419974"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:15:23.300563" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:15:21.295634" elapsed="2.004929"/>
+</kw>
+<doc>Hover over the menu item</doc>
+<status status="PASS" start="2026-10-16T13:15:19.372517" elapsed="3.929081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:15:26.307255" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:15:23.303655" elapsed="3.003600"/>
+</kw>
+<kw name="Click Menu Item" owner="Common">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:15:26.311326" level="INFO">Clicking link 'partial link=Designs'.</msg>
+<arg>partial link=${DESIGN_ITEM}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:15:26.309326" elapsed="5.089712"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:15:41.400542" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:15:31.399038" elapsed="10.001504"/>
+</kw>
+<doc>Click the submenu item once it opens up</doc>
+<status status="PASS" start="2026-10-16T13:15:26.308277" elapsed="15.092265"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:15:43.404706" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:15:41.400542" elapsed="2.004164"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:15:43.431186" level="INFO">${curr_page_title} = Designs</msg>
+<var>${curr_page_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-10-16T13:15:43.406794" elapsed="0.024392"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${curr_page_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-16T13:15:43.432182" elapsed="0.002007"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${curr_page_title}</arg>
+<arg>${extected_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-16T13:15:43.435176" elapsed="0.002967"/>
+</kw>
+<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-16T13:15:43.439141" elapsed="3.406383"/>
+</kw>
+<status status="PASS" start="2026-10-16T13:15:43.439141" elapsed="3.407388"/>
+</kw>
+<tag>Action Chains Robot Framework</tag>
+<timeout value="50 minutes"/>
+<status status="PASS" start="2026-10-16T13:15:11.701553" elapsed="35.146972"/>
+</test>
+<status status="PASS" start="2026-10-16T13:15:10.638140" elapsed="36.214390"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Action Chains Robot Framework</stat>
+</tag>
+<suite>
+<stat name="Test Mouse Actions" id="s1" pass="1" fail="0" skip="0">Test Mouse Actions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
