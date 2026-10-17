@@ -1,306 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T13:28:57.026878" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T13:47:34.811299" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Infinite Scroll" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_infinite_scroll.robot">
 <test id="s1-t1" name="Click Element Infinite Scroll" line="19">
 <kw name="Open Test Browser" owner="Common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:28:58.425586" level="INFO">Opening browser 'chrome' to base url 'https://lastest.cloud/playground'.</msg>
+<msg time="2026-10-17T13:47:35.540447" level="INFO">Opening browser 'chrome' to base url 'https://lastest.cloud/playground'.</msg>
 <arg>${TEST_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-17T13:28:58.412908" elapsed="9.047124"/>
+<status status="PASS" start="2026-10-17T13:47:35.537410" elapsed="5.505632"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-17T13:29:07.461027" elapsed="0.465007"/>
+<status status="PASS" start="2026-10-17T13:47:41.044024" elapsed="0.058276"/>
 </kw>
 <arg>${test_site_url3}</arg>
 <arg>${browser}</arg>
 <timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-17T13:28:58.399272" elapsed="9.526762"/>
+<status status="PASS" start="2026-10-17T13:47:35.535413" elapsed="5.566887"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:10.937346" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-10-17T13:47:44.106051" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:07.931886" elapsed="3.005460"/>
+<status status="PASS" start="2026-10-17T13:47:41.103304" elapsed="3.002747"/>
 </kw>
-<for flavor="IN RANGE">
+<while condition="${True}">
 <iter>
+<kw name="Get Window Height" owner="Common">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-17T13:47:44.107084" level="INFO">Executing JavaScript:
+return document.documentElement.scrollHeight
+Without any arguments.</msg>
+<msg time="2026-10-17T13:47:44.170884" level="INFO">${height} = 3841</msg>
+<var>${height}</var>
+<arg>return document.documentElement.scrollHeight</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="0.063800"/>
+</kw>
+<return>
+<value>${height}</value>
+<status status="PASS" start="2026-10-17T13:47:44.170884" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-17T13:47:44.172899" level="INFO">${start_height} = 3841</msg>
+<var>${start_height}</var>
+<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="0.065815"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nStart Height: ${start_height}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.000000"/>
+</kw>
 <kw name="Scroll Down" owner="Common">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:10.943204" level="INFO">Executing JavaScript:
+<msg time="2026-10-17T13:47:44.172899" level="INFO">Executing JavaScript:
 window.scrollTo(0, document.documentElement.scrollHeight)
 Without any arguments.</msg>
 <arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:10.943204" elapsed="0.075212"/>
+<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.010247"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:29:10.941257" elapsed="0.077159"/>
+<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.010247"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:13.020150" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-10-17T13:47:46.183575" level="INFO">Slept 2 seconds.</msg>
 <arg>${SCROLL_PAUSE_TIME}</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:11.018416" elapsed="2.001734"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDéfilement numéro: ${index}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:13.020150" elapsed="0.007507"/>
+<status status="PASS" start="2026-10-17T13:47:44.183146" elapsed="2.000429"/>
 </kw>
 <kw name="Get Window Height" owner="Common">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:13.036418" level="INFO">Executing JavaScript:
+<msg time="2026-10-17T13:47:46.186681" level="INFO">Executing JavaScript:
 return document.documentElement.scrollHeight
 Without any arguments.</msg>
-<msg time="2026-10-17T13:29:13.054969" level="INFO">${height} = 3841</msg>
+<msg time="2026-10-17T13:47:46.203402" level="INFO">${height} = 3841</msg>
 <var>${height}</var>
 <arg>return document.documentElement.scrollHeight</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:13.035445" elapsed="0.020507"/>
+<status status="PASS" start="2026-10-17T13:47:46.186681" elapsed="0.016721"/>
 </kw>
 <return>
 <value>${height}</value>
-<status status="PASS" start="2026-10-17T13:29:13.055952" elapsed="0.000971"/>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
 </return>
-<msg time="2026-10-17T13:29:13.056923" level="INFO">${scroll_height} = 3841</msg>
+<msg time="2026-10-17T13:47:46.203402" level="INFO">${scroll_height} = 3841</msg>
 <var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:29:13.031556" elapsed="0.025367"/>
+<status status="PASS" start="2026-10-17T13:47:46.183575" elapsed="0.019827"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Scroll Height: ${scroll_height}\n</arg>
+<arg>\nScroll Height: ${scroll_height}\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:13.057896" elapsed="0.000978"/>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
 </kw>
-<var name="${index}">1</var>
-<status status="PASS" start="2026-10-17T13:29:10.940277" elapsed="2.118597"/>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2026-10-17T13:47:46.203402" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing loop.</doc>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+</kw>
+<arg>'${start_height}' == '${scroll_height}'</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="2.096318"/>
 </iter>
-<iter>
-<kw name="Scroll Down" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:13.060828" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.documentElement.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:13.059852" elapsed="0.025390"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:29:13.058874" elapsed="0.026368"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:15.087669" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:13.086219" elapsed="2.001450"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDéfilement numéro: ${index}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:15.088659" elapsed="0.001996"/>
-</kw>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:15.102343" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:29:15.118952" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:15.101363" elapsed="0.017589"/>
-</kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:29:15.119927" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:29:15.119927" level="INFO">${scroll_height} = 3841</msg>
-<var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:29:15.093577" elapsed="0.026350"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Scroll Height: ${scroll_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:15.120901" elapsed="0.001953"/>
-</kw>
-<var name="${index}">2</var>
-<status status="PASS" start="2026-10-17T13:29:13.058874" elapsed="2.063980"/>
-</iter>
-<iter>
-<kw name="Scroll Down" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:15.135662" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.documentElement.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:15.133717" elapsed="0.018532"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:29:15.126791" elapsed="0.026436"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:17.156307" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:15.153227" elapsed="2.004056"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDéfilement numéro: ${index}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:17.160207" elapsed="0.003891"/>
-</kw>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:17.167998" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:29:17.183629" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:17.167030" elapsed="0.016599"/>
-</kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:29:17.183629" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:29:17.184591" level="INFO">${scroll_height} = 3841</msg>
-<var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:29:17.165101" elapsed="0.019490"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Scroll Height: ${scroll_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:17.184591" elapsed="0.001958"/>
-</kw>
-<var name="${index}">3</var>
-<status status="PASS" start="2026-10-17T13:29:15.123830" elapsed="2.063688"/>
-</iter>
-<iter>
-<kw name="Scroll Down" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:17.197349" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.documentElement.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:17.194368" elapsed="0.026367"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:29:17.189509" elapsed="0.031226"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:19.223347" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:17.220735" elapsed="2.003622"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDéfilement numéro: ${index}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:19.225336" elapsed="0.000998"/>
-</kw>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:19.229287" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:29:19.243489" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:19.229287" elapsed="0.014202"/>
-</kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:29:19.243489" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:29:19.243489" level="INFO">${scroll_height} = 3841</msg>
-<var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:29:19.227323" elapsed="0.017144"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Scroll Height: ${scroll_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:19.244467" elapsed="0.000977"/>
-</kw>
-<var name="${index}">4</var>
-<status status="PASS" start="2026-10-17T13:29:17.187518" elapsed="2.058892"/>
-</iter>
-<iter>
-<kw name="Scroll Down" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:19.247391" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.documentElement.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:19.247391" elapsed="0.019560"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:29:19.246410" elapsed="0.020541"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:29:21.269247" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:29:19.267895" elapsed="2.001352"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDéfilement numéro: ${index}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.270243" elapsed="0.002931"/>
-</kw>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:21.276105" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:29:21.310280" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.275129" elapsed="0.036126"/>
-</kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:29:21.311255" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:29:21.312234" level="INFO">${scroll_height} = 3841</msg>
-<var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:29:21.273174" elapsed="0.039060"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Scroll Height: ${scroll_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.312234" elapsed="0.001952"/>
-</kw>
-<var name="${index}">5</var>
-<status status="PASS" start="2026-10-17T13:29:19.246410" elapsed="2.067776"/>
-</iter>
-<var>${index}</var>
-<value>1</value>
-<value>6</value>
-<status status="PASS" start="2026-10-17T13:29:10.938322" elapsed="10.375864"/>
-</for>
+<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="2.096318"/>
+</while>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>../../Outputs</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.317116" elapsed="0.000974"/>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:29:21.811047" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T13:47:46.443123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.318090" elapsed="0.492957"/>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.239721"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-17T13:29:21.812026" elapsed="3.549884"/>
+<status status="PASS" start="2026-10-17T13:47:46.443123" elapsed="3.764442"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:29:21.316138" elapsed="4.046738"/>
+<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="4.004163"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:28:58.396279" elapsed="26.968542"/>
+<status status="PASS" start="2026-10-17T13:47:35.534406" elapsed="14.674070"/>
 </test>
-<status status="PASS" start="2026-10-17T13:28:57.032729" elapsed="28.337946"/>
+<status status="PASS" start="2026-10-17T13:47:34.819284" elapsed="15.390152"/>
 </suite>
 <statistics>
 <total>

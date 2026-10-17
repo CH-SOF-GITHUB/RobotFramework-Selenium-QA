@@ -20,11 +20,16 @@ Click Element Infinite Scroll
       Open Test Browser    ${test_site_url3}   ${browser}
       Sleep   3s
       # Boucle pour descendre 5 fois de suite
-      FOR  ${index}  IN RANGE  1  6
+      WHILE  ${True}
+           ${start_height}=  Get Window Height
+           Log To Console    \nStart Height: ${start_height}\n
            # Execute Keyword script JS  pour scroller tout en bas
            Scroll Down
            Sleep             ${SCROLL_PAUSE_TIME}
-           Log To Console    \nDéfilement numéro: ${index}\n
+           #Log To Console    \nDéfilement numéro: ${index}\n
            ${scroll_height}=  Get Window Height
-           Log To Console     Scroll Height: ${scroll_height}\n
+           Log To Console     \nScroll Height: ${scroll_height}\n
+           Run Keyword If  '${start_height}' == '${scroll_height}'  Exit For Loop
+           # Refer - https://github.com/hjsblogger/web-scraping-with-python/
+           # blob/main/tests/beautiful-soup/test_infinite_scraping.py#L78
       END
