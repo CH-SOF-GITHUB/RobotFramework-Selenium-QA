@@ -1,132 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T13:47:34.811299" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T13:58:45.847965" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Infinite Scroll" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_infinite_scroll.robot">
 <test id="s1-t1" name="Click Element Infinite Scroll" line="19">
 <kw name="Open Test Browser" owner="Common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:47:35.540447" level="INFO">Opening browser 'chrome' to base url 'https://lastest.cloud/playground'.</msg>
+<msg time="2026-10-17T13:58:46.592220" level="INFO">Opening browser 'chrome' to base url 'https://lastest.cloud/playground'.</msg>
 <arg>${TEST_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-17T13:47:35.537410" elapsed="5.505632"/>
+<status status="PASS" start="2026-10-17T13:58:46.589262" elapsed="11.059232"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-17T13:47:41.044024" elapsed="0.058276"/>
+<status status="PASS" start="2026-10-17T13:58:57.649489" elapsed="0.080134"/>
 </kw>
 <arg>${test_site_url3}</arg>
 <arg>${browser}</arg>
 <timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-17T13:47:35.535413" elapsed="5.566887"/>
+<status status="PASS" start="2026-10-17T13:58:46.588262" elapsed="11.142362"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:47:44.106051" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-10-17T13:59:00.832912" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:47:41.103304" elapsed="3.002747"/>
+<status status="PASS" start="2026-10-17T13:58:57.733632" elapsed="3.101077"/>
 </kw>
 <while condition="${True}">
 <iter>
 <kw name="Get Window Height" owner="Common">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:47:44.107084" level="INFO">Executing JavaScript:
+<msg time="2026-10-17T13:59:01.420689" level="INFO">Executing JavaScript:
 return document.documentElement.scrollHeight
 Without any arguments.</msg>
-<msg time="2026-10-17T13:47:44.170884" level="INFO">${height} = 3841</msg>
+<msg time="2026-10-17T13:59:01.737829" level="INFO">${height} = 3841</msg>
 <var>${height}</var>
 <arg>return document.documentElement.scrollHeight</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="0.063800"/>
+<status status="PASS" start="2026-10-17T13:59:01.418643" elapsed="0.319186"/>
 </kw>
 <return>
 <value>${height}</value>
-<status status="PASS" start="2026-10-17T13:47:44.170884" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:01.737829" elapsed="0.000000"/>
 </return>
-<msg time="2026-10-17T13:47:44.172899" level="INFO">${start_height} = 3841</msg>
+<msg time="2026-10-17T13:59:01.739845" level="INFO">${start_height} = 3841</msg>
 <var>${start_height}</var>
-<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="0.065815"/>
+<status status="PASS" start="2026-10-17T13:59:01.414537" elapsed="0.325308"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nStart Height: ${start_height}\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:01.739845" elapsed="0.004102"/>
 </kw>
 <kw name="Scroll Down" owner="Common">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:47:44.172899" level="INFO">Executing JavaScript:
+<msg time="2026-10-17T13:59:01.749862" level="INFO">Executing JavaScript:
 window.scrollTo(0, document.documentElement.scrollHeight)
 Without any arguments.</msg>
 <arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.010247"/>
+<status status="PASS" start="2026-10-17T13:59:01.749862" elapsed="0.322245"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:47:44.172899" elapsed="0.010247"/>
+<status status="PASS" start="2026-10-17T13:59:01.746015" elapsed="0.328146"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:47:46.183575" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-10-17T13:59:04.088660" level="INFO">Slept 2 seconds.</msg>
 <arg>${SCROLL_PAUSE_TIME}</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:47:44.183146" elapsed="2.000429"/>
+<status status="PASS" start="2026-10-17T13:59:02.076216" elapsed="2.012444"/>
 </kw>
 <kw name="Get Window Height" owner="Common">
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:47:46.186681" level="INFO">Executing JavaScript:
+<msg time="2026-10-17T13:59:04.100978" level="INFO">Executing JavaScript:
 return document.documentElement.scrollHeight
 Without any arguments.</msg>
-<msg time="2026-10-17T13:47:46.203402" level="INFO">${height} = 3841</msg>
+<msg time="2026-10-17T13:59:04.193183" level="INFO">${height} = 3841</msg>
 <var>${height}</var>
 <arg>return document.documentElement.scrollHeight</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.186681" elapsed="0.016721"/>
+<status status="PASS" start="2026-10-17T13:59:04.098926" elapsed="0.096303"/>
 </kw>
 <return>
 <value>${height}</value>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:04.195229" elapsed="0.000000"/>
 </return>
-<msg time="2026-10-17T13:47:46.203402" level="INFO">${scroll_height} = 3841</msg>
+<msg time="2026-10-17T13:59:04.195229" level="INFO">${scroll_height} = 3841</msg>
 <var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:47:46.183575" elapsed="0.019827"/>
+<status status="PASS" start="2026-10-17T13:59:04.090709" elapsed="0.104520"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nScroll Height: ${scroll_height}\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:04.197284" elapsed="0.012322"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Exit For Loop" owner="BuiltIn">
-<msg time="2026-10-17T13:47:46.203402" level="INFO">Exiting for loop altogether.</msg>
+<msg time="2026-10-17T13:59:04.227772" level="INFO">Exiting for loop altogether.</msg>
 <doc>Stops executing the enclosing loop.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:04.225756" elapsed="0.002016"/>
 </kw>
 <arg>'${start_height}' == '${scroll_height}'</arg>
 <arg>Exit For Loop</arg>
 <doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:04.213708" elapsed="0.014064"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="2.096318"/>
+<status status="PASS" start="2026-10-17T13:59:01.404535" elapsed="2.823237"/>
 </iter>
-<status status="PASS" start="2026-10-17T13:47:44.107084" elapsed="2.096318"/>
+<status status="PASS" start="2026-10-17T13:59:01.404535" elapsed="2.825274"/>
 </while>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-10-17T13:59:04.426110" level="INFO">Current page contains element 'xpath://a[normalize-space()='GitHub visual regression integration']'.</msg>
+<arg>${xProduct}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-10-17T13:59:04.249796" elapsed="0.176314"/>
+</kw>
+<msg time="2026-10-17T13:59:04.428163" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${xProduct}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-10-17T13:59:04.239789" elapsed="0.190182"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nStatus: ${status}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-17T13:59:04.444303" elapsed="0.021898"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${xProduct}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-10-17T13:59:04.472337" elapsed="0.631540"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-17T13:59:05.156197" level="INFO">Clicking element 'xpath://a[normalize-space()='GitHub visual regression integration']'.</msg>
+<arg>${xProduct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T13:59:05.129731" elapsed="0.944748"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-17T13:59:08.084880" level="INFO">Slept 2 seconds.</msg>
+<arg>${SCROLL_PAUSE_TIME}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-17T13:59:06.077477" elapsed="2.008452"/>
+</kw>
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-10-17T13:59:08.087915" elapsed="0.059038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nCompleted - Infinite Scroll with Robot Framework\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-17T13:59:08.146953" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2026-10-17T13:59:04.468224" elapsed="3.679728"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Element not found on page</arg>
+<doc>Fails the test or task with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-10-17T13:59:08.148951" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-10-17T13:59:08.147952" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2026-10-17T13:59:04.468224" elapsed="3.680727"/>
+</if>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>../../Outputs</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.000000"/>
+<status status="PASS" start="2026-10-17T13:59:08.150951" elapsed="0.000999"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:47:46.443123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T13:59:08.809444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="0.239721"/>
+<status status="PASS" start="2026-10-17T13:59:08.151950" elapsed="0.658780"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-17T13:47:46.443123" elapsed="3.764442"/>
+<status status="PASS" start="2026-10-17T13:59:08.810730" elapsed="3.867632"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:47:46.203402" elapsed="4.004163"/>
+<status status="PASS" start="2026-10-17T13:59:08.149950" elapsed="4.529422"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:47:35.534406" elapsed="14.674070"/>
+<status status="PASS" start="2026-10-17T13:58:46.587222" elapsed="26.093159"/>
 </test>
-<status status="PASS" start="2026-10-17T13:47:34.819284" elapsed="15.390152"/>
+<status status="PASS" start="2026-10-17T13:58:45.851956" elapsed="26.831468"/>
 </suite>
 <statistics>
 <total>

@@ -11,7 +11,7 @@ ${SCROLL_PAUSE_TIME}    2s
 # https://scrapingclub.com/exercise/list_infinite_scroll/
 # Reference - https://github.com/hjsblogger/web-scraping-with-python/
 # blob/main/tests/beautiful-soup/test_infinite_scraping.py
-${xProduct}        xpath:/html/body/div[3]/div/div/div[1]/div[3]/div/div[15]/a"
+${xProduct}        xpath://a[normalize-space()='GitHub visual regression integration']
 
 
 
@@ -32,4 +32,21 @@ Click Element Infinite Scroll
            Run Keyword If  '${start_height}' == '${scroll_height}'  Exit For Loop
            # Refer - https://github.com/hjsblogger/web-scraping-with-python/
            # blob/main/tests/beautiful-soup/test_infinite_scraping.py#L78
+      END
+
+      # Now all the products are loaded since we have reached the end of site
+      # Check if a the respective product is present in the DOM
+      ${status}=  Run Keyword And Return Status    Page Should Contain Element   ${xProduct}
+      Log To Console  \nStatus: ${status}\n
+      # Si l'élément est trouvé (True), on clique dessus
+      IF  ${status}
+          Scroll Element Into View    ${xProduct}
+          Click Element       ${xProduct}
+          Sleep   ${SCROLL_PAUSE_TIME}
+          # Community Rocks :) https://forum.robotframework.org/t/
+          # wait-for-complete-page-load-in-robot-framework/4597/2
+          Wait For Condition	return document.readyState == "complete"
+          Log To Console      \nCompleted - Infinite Scroll with Robot Framework\n
+      ELSE
+          Fail  Element not found on page
       END
