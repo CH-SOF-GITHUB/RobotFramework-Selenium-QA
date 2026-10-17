@@ -16,6 +16,8 @@ Open Test Browser
      Maximize Browser Window
 
 Close Test Browser
+     Set Screenshot Directory      ../../Outputs
+     Capture Page Screenshot
      Close Browser
 
 Move to Element
@@ -29,3 +31,12 @@ Click Menu Item
      Click Link   partial link=${DESIGN_ITEM}
      Sleep  10s
      # Wait Until Page Contains Element
+
+Scroll Down
+     Execute JavaScript    window.scrollTo(0, document.documentElement.scrollHeight)
+
+# Check if it reached the TRUE bottom of the page
+Get Window Height
+     # CORRECTION : Remplacement de doby par body ou documentElement
+     ${height}=    Execute Javascript    return document.documentElement.scrollHeight
+     RETURN        ${height}

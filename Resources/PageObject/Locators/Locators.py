@@ -11,4 +11,9 @@ SubmitButton = "//a[normalize-space()='Input Form Submit']"
 #Address2Input = "//input[@id='inputAddress2']"
 #StateInput = "//input[@id='inputState']"
 #ZipCodeInput = "//input[@id='inputZip']"
-FinalSubmission = "xpath=//*[@id='seleniumform']/div[6]/button"
+#FinalSubmission = "xpath=//*[@id='seleniumform']/div[6]/button"
+
+########## Locators for mouse interactions ##########
+#ElDroggable = "id:draggable"
+#ElDroppable = "id:droppable"
+#IsDropped = "xpath://p[normalize-space()='Dropped!']"
