@@ -1,201 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T13:58:45.847965" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Infinite Scroll" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_infinite_scroll.robot">
-<test id="s1-t1" name="Click Element Infinite Scroll" line="19">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T16:54:25.574130" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Form Elements" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_form_elements.robot">
+<test id="s1-t1" name="Select Option From Dropdown" line="14">
 <kw name="Open Test Browser" owner="Common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:58:46.592220" level="INFO">Opening browser 'chrome' to base url 'https://lastest.cloud/playground'.</msg>
+<msg time="2026-10-17T16:54:26.896467" level="INFO">Opening browser 'Chrome' to base url 'https://www.testmuai.com/selenium-playground/select-dropdown-demo/'.</msg>
 <arg>${TEST_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-17T13:58:46.589262" elapsed="11.059232"/>
+<status status="PASS" start="2026-10-17T16:54:26.883852" elapsed="7.050434"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-17T13:58:57.649489" elapsed="0.080134"/>
+<status status="PASS" start="2026-10-17T16:54:33.935286" elapsed="0.317237"/>
 </kw>
-<arg>${test_site_url3}</arg>
-<arg>${browser}</arg>
+<arg>${DROPDOWN_URL}</arg>
+<arg>${BROWSER}</arg>
 <timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-17T13:58:46.588262" elapsed="11.142362"/>
+<status status="PASS" start="2026-10-17T16:54:26.880848" elapsed="7.373695"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:59:00.832912" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:58:57.733632" elapsed="3.101077"/>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:34.285398" level="INFO">Selecting options from selection list 'id:select-demo' by value Monday.</msg>
+<arg>${DROPDOWN_ID Locator}</arg>
+<arg>Monday</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-10-17T16:54:34.267445" elapsed="0.374572"/>
 </kw>
-<while condition="${True}">
-<iter>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:01.420689" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:59:01.737829" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:59:01.418643" elapsed="0.319186"/>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:34.649001" level="INFO">Verifying list 'id:select-demo' has option [ Monday ] selected.</msg>
+<msg time="2026-10-17T16:54:34.708209" level="INFO">Current page contains list 'id:select-demo'.</msg>
+<arg>${DROPDOWN_ID Locator}</arg>
+<arg>Monday</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-10-17T16:54:34.647003" elapsed="0.869521"/>
 </kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:59:01.737829" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:59:01.739845" level="INFO">${start_height} = 3841</msg>
-<var>${start_height}</var>
-<status status="PASS" start="2026-10-17T13:59:01.414537" elapsed="0.325308"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nStart Height: ${start_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:59:01.739845" elapsed="0.004102"/>
-</kw>
-<kw name="Scroll Down" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:01.749862" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.documentElement.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.documentElement.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:59:01.749862" elapsed="0.322245"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:59:01.746015" elapsed="0.328146"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:59:04.088660" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:59:02.076216" elapsed="2.012444"/>
-</kw>
-<kw name="Get Window Height" owner="Common">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:04.100978" level="INFO">Executing JavaScript:
-return document.documentElement.scrollHeight
-Without any arguments.</msg>
-<msg time="2026-10-17T13:59:04.193183" level="INFO">${height} = 3841</msg>
-<var>${height}</var>
-<arg>return document.documentElement.scrollHeight</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.098926" elapsed="0.096303"/>
-</kw>
-<return>
-<value>${height}</value>
-<status status="PASS" start="2026-10-17T13:59:04.195229" elapsed="0.000000"/>
-</return>
-<msg time="2026-10-17T13:59:04.195229" level="INFO">${scroll_height} = 3841</msg>
-<var>${scroll_height}</var>
-<status status="PASS" start="2026-10-17T13:59:04.090709" elapsed="0.104520"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nScroll Height: ${scroll_height}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.197284" elapsed="0.012322"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Exit For Loop" owner="BuiltIn">
-<msg time="2026-10-17T13:59:04.227772" level="INFO">Exiting for loop altogether.</msg>
-<doc>Stops executing the enclosing loop.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.225756" elapsed="0.002016"/>
-</kw>
-<arg>'${start_height}' == '${scroll_height}'</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.213708" elapsed="0.014064"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:59:01.404535" elapsed="2.823237"/>
-</iter>
-<status status="PASS" start="2026-10-17T13:59:01.404535" elapsed="2.825274"/>
-</while>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:04.426110" level="INFO">Current page contains element 'xpath://a[normalize-space()='GitHub visual regression integration']'.</msg>
-<arg>${xProduct}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.249796" elapsed="0.176314"/>
-</kw>
-<msg time="2026-10-17T13:59:04.428163" level="INFO">${status} = True</msg>
-<var>${status}</var>
-<arg>Page Should Contain Element</arg>
-<arg>${xProduct}</arg>
-<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.239789" elapsed="0.190182"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nStatus: ${status}\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.444303" elapsed="0.021898"/>
-</kw>
-<if>
-<branch type="IF" condition="${status}">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${xProduct}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-10-17T13:59:04.472337" elapsed="0.631540"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:05.156197" level="INFO">Clicking element 'xpath://a[normalize-space()='GitHub visual regression integration']'.</msg>
-<arg>${xProduct}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-17T13:59:05.129731" elapsed="0.944748"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T13:59:08.084880" level="INFO">Slept 2 seconds.</msg>
-<arg>${SCROLL_PAUSE_TIME}</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T13:59:06.077477" elapsed="2.008452"/>
-</kw>
-<kw name="Wait For Condition" owner="SeleniumLibrary">
-<arg>return document.readyState == "complete"</arg>
-<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
-<status status="PASS" start="2026-10-17T13:59:08.087915" elapsed="0.059038"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nCompleted - Infinite Scroll with Robot Framework\n</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-17T13:59:08.146953" elapsed="0.000999"/>
-</kw>
-<status status="PASS" start="2026-10-17T13:59:04.468224" elapsed="3.679728"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" owner="BuiltIn">
-<arg>Element not found on page</arg>
-<doc>Fails the test or task with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-10-17T13:59:08.148951" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2026-10-17T13:59:08.147952" elapsed="0.000999"/>
-</branch>
-<status status="PASS" start="2026-10-17T13:59:04.468224" elapsed="3.680727"/>
-</if>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>../../Outputs</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-17T13:59:08.150951" elapsed="0.000999"/>
+<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-17T13:59:08.809444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T16:54:35.744064" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-17T13:59:08.151950" elapsed="0.658780"/>
+<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="0.227540"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-17T13:59:08.810730" elapsed="3.867632"/>
+<status status="PASS" start="2026-10-17T16:54:35.744064" elapsed="4.583653"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:59:08.149950" elapsed="4.529422"/>
+<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="4.812203"/>
 </kw>
-<status status="PASS" start="2026-10-17T13:58:46.587222" elapsed="26.093159"/>
+<tag>SELECT</tag>
+<status status="PASS" start="2026-10-17T16:54:26.879854" elapsed="13.450843"/>
 </test>
-<status status="PASS" start="2026-10-17T13:58:45.851956" elapsed="26.831468"/>
+<test id="s1-t2" name="Check And Verify Checkbox State" line="20">
+<kw name="Open Test Browser" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:40.346688" level="INFO">Opening browser 'Chrome' to base url 'https://www.testmuai.com/selenium-playground/checkbox-demo/'.</msg>
+<arg>${TEST_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-17T16:54:40.342685" elapsed="8.501991"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-17T16:54:48.845678" elapsed="0.170244"/>
+</kw>
+<arg>${CHECKBOX_URL}</arg>
+<arg>${BROWSER}</arg>
+<timeout value="50 minutes"/>
+<status status="PASS" start="2026-10-17T16:54:40.338689" elapsed="8.677233"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:49.018540" level="INFO">Selecting checkbox 'xpath:(//input[@type='checkbox'])[1]'.</msg>
+<arg>${CheckBox_Btn Locator}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T16:54:49.018540" elapsed="0.574171"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:49.601684" level="INFO">Verifying checkbox 'xpath:(//input[@type='checkbox'])[1]' is selected.</msg>
+<arg>${CheckBox_Btn Locator}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2026-10-17T16:54:49.599701" elapsed="0.288945"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-17T16:54:51.893822" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-17T16:54:49.891089" elapsed="2.002733"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:51.893822" level="INFO">Double clicking element 'xpath:(//input[@type='checkbox'])[1]'.</msg>
+<arg>${CheckBox_Btn Locator}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T16:54:51.893822" elapsed="0.458353"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:52.361535" level="INFO">Verifying checkbox 'xpath:(//input[@type='checkbox'])[1]' is not selected.</msg>
+<arg>${CheckBox_Btn Locator}</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-17T16:54:52.358540" elapsed="0.186804"/>
+</kw>
+<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>../../Outputs</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2026-10-17T16:54:52.547358" elapsed="0.004033"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-17T16:54:52.990997" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-17T16:54:52.551391" elapsed="0.439606"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-17T16:54:52.991990" elapsed="4.328426"/>
+</kw>
+<status status="PASS" start="2026-10-17T16:54:52.545344" elapsed="4.775072"/>
+</kw>
+<tag>CHECKBOX</tag>
+<status status="PASS" start="2026-10-17T16:54:40.334691" elapsed="16.986724"/>
+</test>
+<status status="PASS" start="2026-10-17T16:54:25.579128" elapsed="31.750330"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">CHECKBOX</stat>
+<stat pass="1" fail="0" skip="0">SELECT</stat>
 </tag>
 <suite>
-<stat name="Test Infinite Scroll" id="s1" pass="1" fail="0" skip="0">Test Infinite Scroll</stat>
+<stat name="Test Form Elements" id="s1" pass="2" fail="0" skip="0">Test Form Elements</stat>
 </suite>
 </statistics>
 <errors>
