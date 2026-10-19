@@ -1,0 +1,4 @@
+username,password,expectedURL,expectedTitle
+standard_user,secret_sauce,https://www.saucedemo.com/inventory.html,Swag Labs
+problem_user,secret_sauce,https://www.saucedemo.com/inventory.html,Swag Labs
+visual_user,secret_sauce,https://www.saucedemo.com/inventory.html,Swag Labs
