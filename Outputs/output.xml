@@ -1,139 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-17T16:54:25.574130" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Form Elements" source="E:\PycharmProjects\robotframework\RobotFramework\Tests\Common\test_form_elements.robot">
-<test id="s1-t1" name="Select Option From Dropdown" line="14">
-<kw name="Open Test Browser" owner="Common">
+<robot generator="Robot 7.5 (Python 3.12.0 on win32)" generated="2026-10-18T19:58:57.377415" rpa="false" schemaversion="5">
+<suite id="s1" name="keywordDrivenTest1" source="E:\PycharmProjects\robotframework\RobotFramework\DemoTests\1-4_Specification_Styles\1-4-1_Keyword-Driven-Specification\keywordDrivenTest1.robot">
+<test id="s1-t1" name="Verify Foundation Link" line="6">
+<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary" type="SETUP">
+<arg>30s</arg>
+<doc>Sets the page load timeout value used by Selenium.</doc>
+<status status="PASS" start="2026-10-18T19:58:57.814414" elapsed="0.001001"/>
+</kw>
+<kw name="Open Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:26.896467" level="INFO">Opening browser 'Chrome' to base url 'https://www.testmuai.com/selenium-playground/select-dropdown-demo/'.</msg>
-<arg>${TEST_URL}</arg>
-<arg>${BROWSER}</arg>
+<msg time="2026-10-18T19:58:57.817412" level="INFO">Opening browser 'chrome' to base url 'http://robotframework.org'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-17T16:54:26.883852" elapsed="7.050434"/>
+<status status="PASS" start="2026-10-18T19:58:57.816419" elapsed="19.209678"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-17T16:54:33.935286" elapsed="0.317237"/>
+<status status="PASS" start="2026-10-18T19:59:17.026097" elapsed="0.049053"/>
 </kw>
-<arg>${DROPDOWN_URL}</arg>
-<arg>${BROWSER}</arg>
-<timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-17T16:54:26.880848" elapsed="7.373695"/>
+<arg>http://robotframework.org</arg>
+<arg>chrome</arg>
+<status status="PASS" start="2026-10-18T19:58:57.815415" elapsed="19.259735"/>
 </kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:34.285398" level="INFO">Selecting options from selection list 'id:select-demo' by value Monday.</msg>
-<arg>${DROPDOWN_ID Locator}</arg>
-<arg>Monday</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-10-17T16:54:34.267445" elapsed="0.374572"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-18T19:59:17.076143" level="INFO">Clicking element '//*[@id="page"]/nav/div/button/span'.</msg>
+<arg>locator=//*[@id="page"]/nav/div/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-18T19:59:17.076143" elapsed="0.470105"/>
 </kw>
-<kw name="List Selection Should Be" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:34.649001" level="INFO">Verifying list 'id:select-demo' has option [ Monday ] selected.</msg>
-<msg time="2026-10-17T16:54:34.708209" level="INFO">Current page contains list 'id:select-demo'.</msg>
-<arg>${DROPDOWN_ID Locator}</arg>
-<arg>Monday</arg>
-<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
-<status status="PASS" start="2026-10-17T16:54:34.647003" elapsed="0.869521"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link:Foundation</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-18T19:59:17.548248" elapsed="0.241740"/>
 </kw>
-<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
-<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
-<arg>../../Outputs</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="0.000000"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-10-18T19:59:17.790949" level="INFO">Clicking link 'link:Foundation'.</msg>
+<arg>link:Foundation</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-18T19:59:17.790949" elapsed="18.540620"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:35.744064" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="0.227540"/>
+<kw name="Verify Title">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-18T19:59:36.343282" level="INFO">Page title is 'Robot Framework Foundation'.</msg>
+<arg>${ExpectedTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-10-18T19:59:36.331569" elapsed="0.011713"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-17T16:54:35.744064" elapsed="4.583653"/>
+<arg>Robot Framework Foundation</arg>
+<status status="PASS" start="2026-10-18T19:59:36.331569" elapsed="0.011713"/>
 </kw>
-<status status="PASS" start="2026-10-17T16:54:35.516524" elapsed="4.812203"/>
+<kw name="Verify Url">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-18T19:59:36.347561" level="INFO">Current location is 'https://robotframework.org/foundation/'.</msg>
+<arg>${ExpectedUrl}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-18T19:59:36.345547" elapsed="0.002014"/>
 </kw>
-<tag>SELECT</tag>
-<status status="PASS" start="2026-10-17T16:54:26.879854" elapsed="13.450843"/>
+<arg>https://robotframework.org/foundation/</arg>
+<status status="PASS" start="2026-10-18T19:59:36.344845" elapsed="0.002716"/>
+</kw>
+<tag>RFCP</tag>
+<status status="PASS" start="2026-10-18T19:58:57.813417" elapsed="38.534144"/>
 </test>
-<test id="s1-t2" name="Check And Verify Checkbox State" line="20">
-<kw name="Open Test Browser" owner="Common">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:40.346688" level="INFO">Opening browser 'Chrome' to base url 'https://www.testmuai.com/selenium-playground/checkbox-demo/'.</msg>
-<arg>${TEST_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-17T16:54:40.342685" elapsed="8.501991"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-17T16:54:48.845678" elapsed="0.170244"/>
-</kw>
-<arg>${CHECKBOX_URL}</arg>
-<arg>${BROWSER}</arg>
-<timeout value="50 minutes"/>
-<status status="PASS" start="2026-10-17T16:54:40.338689" elapsed="8.677233"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:49.018540" level="INFO">Selecting checkbox 'xpath:(//input[@type='checkbox'])[1]'.</msg>
-<arg>${CheckBox_Btn Locator}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-17T16:54:49.018540" elapsed="0.574171"/>
-</kw>
-<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:49.601684" level="INFO">Verifying checkbox 'xpath:(//input[@type='checkbox'])[1]' is selected.</msg>
-<arg>${CheckBox_Btn Locator}</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="PASS" start="2026-10-17T16:54:49.599701" elapsed="0.288945"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-17T16:54:51.893822" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-17T16:54:49.891089" elapsed="2.002733"/>
-</kw>
-<kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:51.893822" level="INFO">Double clicking element 'xpath:(//input[@type='checkbox'])[1]'.</msg>
-<arg>${CheckBox_Btn Locator}</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-17T16:54:51.893822" elapsed="0.458353"/>
-</kw>
-<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:52.361535" level="INFO">Verifying checkbox 'xpath:(//input[@type='checkbox'])[1]' is not selected.</msg>
-<arg>${CheckBox_Btn Locator}</arg>
-<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
-<status status="PASS" start="2026-10-17T16:54:52.358540" elapsed="0.186804"/>
-</kw>
-<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
-<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
-<arg>../../Outputs</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-17T16:54:52.547358" elapsed="0.004033"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-17T16:54:52.990997" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-17T16:54:52.551391" elapsed="0.439606"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-17T16:54:52.991990" elapsed="4.328426"/>
-</kw>
-<status status="PASS" start="2026-10-17T16:54:52.545344" elapsed="4.775072"/>
-</kw>
-<tag>CHECKBOX</tag>
-<status status="PASS" start="2026-10-17T16:54:40.334691" elapsed="16.986724"/>
-</test>
-<status status="PASS" start="2026-10-17T16:54:25.579128" elapsed="31.750330"/>
+<status status="PASS" start="2026-10-18T19:58:57.379416" elapsed="38.968145"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">CHECKBOX</stat>
-<stat pass="1" fail="0" skip="0">SELECT</stat>
+<stat pass="1" fail="0" skip="0">RFCP</stat>
 </tag>
 <suite>
-<stat name="Test Form Elements" id="s1" pass="2" fail="0" skip="0">Test Form Elements</stat>
+<stat name="keywordDrivenTest1" id="s1" pass="1" fail="0" skip="0">keywordDrivenTest1</stat>
 </suite>
 </statistics>
 <errors>

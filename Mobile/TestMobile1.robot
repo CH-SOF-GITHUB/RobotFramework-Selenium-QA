@@ -1,40 +1,27 @@
+
 *** Settings ***
-Documentation   Simple example using AppiumLibrary
-Library         AppiumLibrary
+Documentation    Test Chrome sur BlueStacks avec Appium
+Library          AppiumLibrary
+Suite Teardown   Run Keyword If Test Failed    Log    Vérifier les logs Appium et Android
 
 *** Variables ***
-${ANDROID_AUTOMATION_NAME}   UIAutomator2
-# Pointage direct vers le dossier Mobile à la racine
-${ANDROID_APP}               ${CURDIR}/../../Mobile/ApiDemos-debug.apk
-${ANDROID_PLATFORM_NAME}     Android
-${ANDROID_PLATFORM_VERSION}  13
+${APPIUM_SERVER}    http://127.0.0.1:4723
+${DEVICE_UDID}      emulator-5554
 
 *** Test Cases ***
-Example 1: [Appium] Search Box Demo with Robot Framework
-       Open Test Application
-       Input Search Query    Hello World!
-       Submit Search
-       Search Query Should Be Matching  Hello World!
+Ouvrir Chrome Sur BlueStacks
+    Open Application    ${APPIUM_SERVER}
+    ...    platformName=Android
+    ...    automationName=UiAutomator2
+    ...    deviceName=${DEVICE_UDID}
+    ...    udid=${DEVICE_UDID}
+    ...    browserName=Chrome
+    ...    noReset=${True}
+    ...    adbExecTimeout=120000
+    ...    uiautomator2ServerLaunchTimeout=60000
+    ...    uiautomator2ServerInstallTimeout=60000
 
-*** Keywords ***
-Open Test Application
-    Open Application    http://127.0.0.1:4723
-    ...    automationName=${ANDROID_AUTOMATION_NAME}
-    ...    platformName=${ANDROID_PLATFORM_NAME}
-    ...    platformVersion=${ANDROID_PLATFORM_VERSION}
-    ...    app=${ANDROID_APP}
-    ...    appPackage=io.appium.android.apis
-    ...    appActivity=.app.SearchInvoke
-
-Input Search Query
-  [Arguments]  ${query}
-  Input Text  txt_query_prefill  ${query}
-
-Submit Search
-  Click Element  btn_start_search
-
-Search Query Should Be Matching
-  [Arguments]  ${text}
-  Wait Until Page Contains Element  android:id/search_src_text
-  Element Text Should Be  android:id/search_src_text  ${text}
-
+    Go To Url    https://www.google.com
+    Sleep    3s
+    Capture Page Screenshot
+    [Teardown]    Run Keyword And Ignore Error    Close Application
